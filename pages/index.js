@@ -1,5 +1,5 @@
 
-import { table, minifyItems } from "../utils/Airtable";
+import { table, minifyItems } from "../utils/airtable";
 
 export async function getServerSideProps(context) {
     try {
@@ -20,13 +20,8 @@ export async function getServerSideProps(context) {
   }
 
 export default function Home({ initialItems }) {
-  // ...
   return (
-    console.log(JSON.stringify(initialItems, null, 4))
+    console.log(JSON.stringify(initialItems[1].fields, null, 4))
   );
-
-  // ...
 }
-
-//        
 
