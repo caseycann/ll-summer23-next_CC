@@ -19,9 +19,13 @@ export async function getServerSideProps(context) {
     }
   }
 
-export default function Home({ initialItems }) {
-  return (
-    console.log(JSON.stringify(initialItems[1].fields, null, 4))
-  );
-}
+  export default function sendData({ initialItems }) {
+    for (let i = 0; i < initialItems.length; i++) {
+      const jsonItems = initialItems[i];
+      console.log(JSON.stringify(jsonItems.fields.ShootIDOverride, null, 4));
+    }
+  
+    return null; // You need to return JSX or null from the component
+  }
 
+  // export { sendData };
